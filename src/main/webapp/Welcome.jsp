@@ -80,7 +80,7 @@
 			<th>User_Id</th>
 			<th>Created Date</th>
 		</tr>
-		<c:forEach items="${comment}" var="stsrpt">
+		<c:forEach items="${commentList}" var="stsrpt">
 			<tr>
 				<td>${comment.commentid}</td>
 				<td>${comment.details}</td>

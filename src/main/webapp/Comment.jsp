@@ -11,7 +11,7 @@
 	<form method="POST" action='/EmployeeManagement/manage?action=save_comment'>
         Regulation Id: <input type="text" name="regulationid" value="<c:out value="${comment.regulationid}" />" /><br />
         Comments : <input type="text" name="details" value="<c:out value="${comment.details}" />" /><br />
-        		   <input type="hidden" name="id" value="<c:out value="${comment.commentid}" />" /><br />
+        CommentId: <input type="text" name="commentid" value="<c:out value="${comment.commentid}" />" /><br />
         		   
         <input type="submit" value="Submit" />
     </form>

@@ -34,6 +34,8 @@ public class DbCon {
 				s.execute();
 				s = conn.prepareStatement("Create Table if Not exists regulation(regulationid Varchar(20) primary key,details Varchar(20),department Varchar(20) ,createDate DATE); ");
 				s.execute();
+				s = conn.prepareStatement("Create Table if Not exists comment(commentid Varchar(20) primary key,details Varchar(20),regulationid Varchar(20) ,createDate DATE,userid Varchar(20)) ; ");
+				s.execute();
 			} catch (SQLException e) {
 				e.printStackTrace();
 			} catch (ClassNotFoundException e) {

@@ -212,9 +212,11 @@ public class Controller extends HttpServlet {
 		}
 	}
 
-	private void getComment(HttpServletRequest request, HttpServletResponse response) {
+	private void getComment(HttpServletRequest request, HttpServletResponse response) throws IOException, SQLException {
 		// TODO Auto-generated method stub
-		
+		commentmanager = new CommentManage();
+		List<Comment> CommentList = commentmanager.getAllComment();
+		request.setAttribute("commentList", CommentList);	
 	}
 
 	private void getRegulation(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
