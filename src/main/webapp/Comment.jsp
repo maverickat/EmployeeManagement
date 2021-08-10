@@ -12,7 +12,6 @@
         Regulation Id: <input type="text" name="regulationid" value="<c:out value="${comment.regulationid}" />" /><br />
         Comments : <input type="text" name="details" value="<c:out value="${comment.details}" />" /><br />
         CommentId: <input type="text" name="commentid" value="<c:out value="${comment.commentid}" />" /><br />
-        		   
         <input type="submit" value="Submit" />
     </form>
 </body>

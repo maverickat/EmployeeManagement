@@ -92,7 +92,7 @@ public class Controller extends HttpServlet {
 				comment.setCreateDate(new Date());
 				comment.setRegulationid(request.getParameter("regulationid"));
 				comment.setCommentid(request.getParameter("commentid"));
-				comment.setUserid(request.getParameter("userid"));
+				comment.setUserid((String)(request.getSession(false).getAttribute("id")));
 				commentmanager = new CommentManage();
 				commentmanager.createComment(comment);
 				getUser(request,response);

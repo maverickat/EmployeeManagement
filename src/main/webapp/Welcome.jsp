@@ -12,7 +12,7 @@
 <body>
 	<h1>Employee Management</h1>
 	<ul>
-		<li><a>Welcome ${user.fname} ${user.lname} : ${id}</a></li>
+		<li><a>Welcome ${user.fname} ${user.lname} : ${user.userid}</a></li>
 			<c:if test = "${user.role == 'admin'}">
 				<li><a href="/EmployeeManagement/manage?action=add_user">Add User</a></li>
 				<li><a href="/EmployeeManagement/manage?action=add_regulation">Add Regulation</a></li>
@@ -80,14 +80,15 @@
 			<th>User_Id</th>
 			<th>Created Date</th>
 		</tr>
-		<c:forEach items="${commentList}" var="stsrpt">
+		<c:forEach items="${commentList}" var="comment">
 			<tr>
 				<td>${comment.commentid}</td>
 				<td>${comment.details}</td>
 				<td>${comment.regulationid}</td>
 				<td>${comment.userid}</td>
 				<td><fmt:formatDate value="${comment.createDate}" pattern="yyyy-MM-dd"/></td>
-				<c:if test = "${id == comment.userid}">
+				<c:if test = "${user.userid == comment.userid}">
+				<td><a href="/EmployeeManagement/manage?action=delete_comment&commentid=<c:out value='${comment.commentid}' />">Delete</a></td>
 				</c:if>
 			</tr>
 		</c:forEach>

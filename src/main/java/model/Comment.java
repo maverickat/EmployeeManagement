@@ -15,8 +15,8 @@ public class Comment {
 	public String getCommentid() {
 		return commentid;
 	}
-	public void setCommentid(String string) {
-		this.commentid = string;
+	public void setCommentid(String commentid) {
+		this.commentid = commentid;
 	}
 	public String getUserid() {
 		return userid;
@@ -27,8 +27,8 @@ public class Comment {
 	public String getRegulationid() {
 		return regulationid;
 	}
-	public void setRegulationid(String string) {
-		this.regulationid = string;
+	public void setRegulationid(String regulationid) {
+		this.regulationid = regulationid;
 	}
 	public String getDetails() {
 		return details;

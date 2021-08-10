@@ -46,7 +46,7 @@ public class CommentManage {
 			comment.setDetails(rs.getString("details"));
 			comment.setCreateDate(rs.getDate("CreateDate"));
 			comment.setUserid(rs.getString("userid"));
-			comment.setUserid(rs.getString("commentid"));
+			comment.setCommentid(rs.getString("commentid"));
 			commentlist.add(comment);
 		}
 		return commentlist;
